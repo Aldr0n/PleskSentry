@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Check if parameter is provided
+if [ $# -lt 1 ]; then
+    echo "Error: Missing trusted_ips file path"
+    echo "Usage: $0 <trusted_ips_file>"
+    exit 1
+fi
+
+TRUSTED_IPS_FILE=$1
+
+# Fetch banned IPs from Plesk and save to file
+sudo plesk bin ip_ban -t > "$TRUSTED_IPS_FILE"

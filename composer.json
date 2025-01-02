@@ -1,0 +1,14 @@
+{
+    "name": "ruben/plesk-sentry",
+    "description": "Scans plesk server logfiles and detects violations.",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sentry\\": "src/"
+        }
+    }
+}

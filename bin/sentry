@@ -1,0 +1,32 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Sentry\Sentry;
+
+// Enable error reporting
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+$options = getopt('', ['log:', 'dry-run']);
+
+$log     = $options['log'];
+$dry_run = isset($options['dry-run']);
+$root    = dirname(__DIR__);
+
+if (!$log) {
+    echo "Error: Missing log file path\n";
+    exit(1);
+}
+
+try {
+    new Sentry($log, $dry_run);
+    echo "✓ Success: Run completed successfully\n";
+}
+catch (\Exception $e) {
+    echo "Error: " . $e->getMessage() . "\n";
+    echo "File: " . $e->getFile() . ":" . $e->getLine() . "\n";
+    echo "Trace:\n" . $e->getTraceAsString() . "\n";
+    exit(1);
+}
