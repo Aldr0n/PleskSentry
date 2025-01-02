@@ -1,6 +1,6 @@
 # 🚨 Plesk Sentry
 
-Small, lightweight PHP based  tool to keep your Plesk server safe by from pesky bruteforcers by scanning logfiles and detecting suspicious activities. Aiming to be bit more flexible than fail2ban.
+Small, lightweight PHP based tool to keep your Plesk server safe from pesky bruteforcers by scanning logfiles and detecting suspicious activities. Aiming to be bit more flexible than fail2ban.
 
 ## What it does
 
