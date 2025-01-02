@@ -15,7 +15,7 @@ Small, lightweight PHP based tool to keep your Plesk server safe from pesky brut
 ## Setup Guide
 1. Clone the repository to your server (location of your choice):
    ```bash
-   git clone https://github.com/your-username/plesk-sentry.git
+   git clone [https://github.com/your-username/plesk-sentry.git](https://github.com/Aldr0n/PleskSentry.git)
    cd plesk-sentry
    ```
 
