@@ -28,11 +28,13 @@ Small, lightweight PHP based tool to keep your Plesk server safe from pesky brut
 3. Configure the scan trigger:
    ```bash
    # Add cron job via plesk ui (here it runs every 10 minutes)
-   Script path: /path/to/installation/bin/sentry
-   Use PHP version: 8.2 or higher
-   Crontab: */10 * * * *
-   Arguments: --log=/var/log/syslog (example)
-   Notify: Every time (optional, set notification to "Every time" to get reports of banned ips)
+   Task type:         Run a php script
+   Script path:       /path/to/installation/bin/sentry
+   Arguments:         --log=/var/log/syslog (example)
+   Use PHP version:   8.2 or higher
+   Crontab:           */10 * * * *
+   System user:       root
+   Notify:            Every time (optional, set notification to "Every time" to get reports of banned ips)
    ```
 
 ## Future Ideas
