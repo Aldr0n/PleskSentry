@@ -9,7 +9,7 @@ Small, lightweight PHP based tool to keep your Plesk server safe from pesky brut
 
 ## Requirements
 - PHP >= 8.2
-- A Plesk server (obviously 😉)
+- A Plesk server (obviously)
 - That's it!
 
 ## Setup Guide
